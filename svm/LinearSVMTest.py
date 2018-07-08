@@ -4,7 +4,7 @@ from scipy.io import loadmat
 
 from svm import MySvm
 
-data = loadmat('data\ex6data1.mat')
+data = loadmat('svm\data\ex6data1.mat')
 
 X = np.mat(data['X'])
 y = np.mat(data['y'], dtype=np.float)
