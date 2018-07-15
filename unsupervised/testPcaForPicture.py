@@ -38,6 +38,14 @@ XNorm, Z, U, UReduce, S, V = pca.pca(X, k=100)
 XRec = pca.recoverData(UReduce, Z)
 
 # 显示修复后的图，可以看出，PCA 损失了一部分细节
+# print(XRec[0:100, :])
 display(XRec[0:100, :], 32, 32)
+
+XEigRed, XEigRec = pca.pca_eig(X, k=100)
+# print(XEigRec[0:100, :])
+
+#显示我自己实现的svd的pca图
+display(XEigRec[0:100, :], 32, 32)
+
 
 
